@@ -9,6 +9,20 @@ It demonstrates how AI agents can translate conversational queries into structur
 ---
 
 ## Credentials to add
+
+### Google Services (Gmail and more)
+Client ID
+```
+603547173430-sr83url8u0bvkgs9k3adbe8vpphjvnkd.apps.googleusercontent.com
+```
+
+Client Secret
+```
+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
+```
+
+
+### Postgres
 Host
 ```
 aws-0-ap-northeast-1.pooler.supabase.com
