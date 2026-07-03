@@ -1,0 +1,47 @@
+Record ID,Company Name ,GCC City,Industry ,Function,Headcount,Attrition Rate,Avg Annual Salary,GCC Setup Date,Tier,Remote/Hybrid,Client Contact Email
+1,Acme Global Tech,Bengaluru,BFSI,Engineering,1200,12%,"18,50,000",14-03-2019,Tier 1,Hybrid,rjoshi@acmeglobal.com
+2,Acme Global Tech,Bengaluru,BFSI,Engineering,1200,12%,"18,50,000",14-03-2019,Tier 1,Hybrid,rjoshi@acmeglobal.com
+3,Nova Health Systems,Hyderabad,Healthcare,R&D,340,,22.5 LPA,2021-07-01,tier 2,WFH,
+4,nova health systems,hyderabad,Healthcare,r&d,340,18%,2250000,01/07/2021,Tier 2,Remote,s.iyer@novahealth.co
+5,Vertex Financial Svcs,Pune,BFSI,Finance & Accounting,875,9.5%,1600000,2018,Tier 1,hybrid,
+6,Vertex Financial Services,pune,Bfsi,Finance and Accounting,,9.5,"16,00,000",N/A,Tier 1,Hybrid,mkapoor@vertexfin.com
+7,Bright Retail Analytics,Chennai,Retail,Data & Analytics,210,,,03-2022,Tier 3,Onsite,contact@brightretail.in
+8,Bright Retail Analytics ,Chennai ,Retail ,Data & Analytics ,215,22%,1450000,2022-03-15,Tier 3,onsite,contact@brightretail.in
+9,Orbit Manufacturing GCC,Coimbatore,Manufacturing,Supply Chain,150,15,,unknown,Tier 3,Hybrid,
+10,Zenith Pharma Labs,Bengaluru,Pharma,R&D,980,,3200000 usd,2016-11-20,Tier 1,Hybrid,priya.n@zenithpharma.com
+11,Zenith Pharma Labs,Blore,Pharma,R&D,985,11%,"32,00,000",20/11/2016,Tier 1,hybrid,priya.n@zenithpharma.com
+12,Quantum Insurance Tech,Gurugram,Insurance,Engineering,invalid,14%,2100000,2020-01-10,Tier 2,Remote,
+13,Quantum Insurance Tech,Gurgaon,Insurance,engineering,640,14.0%,21 lakh,10-01-2020,Tier 2,remote,d.mehta@quantumins.com
+14,Silverline Logistics,Mumbai,Logistics,Operations,,,,,,,
+15,Delta Consumer Goods,Bangalore,FMCG,Marketing,455,-5%,1900000,2019/05/22,Tier 2,Hybrid,a.rao@deltacg.com
+16,Delta Consumer Goods,Bengaluru,FMCG,Marketing ,455,8%,"19,00,000",22-05-2019,Tier 2,Hybrid,a.rao@deltacg.com
+17,Helix Biotech Center,Hyderabad,Pharma,R&D,720,16%,2750000,2017,tier 1,onsite,
+18,Cascade Media Solutions,Noida,Media,Content & Design,95,25%,1100000,2023-09-01,Tier 3,hybrid,cascade_hr@cascademedia.io
+19,Cascade Media Solutions,noida,media,content and design,98,,"11,00,000",01-09-2023,Tier 3,Hybrid,cascade_hr@cascademedia.io
+20,Anchor Steel Global,Chennai,Manufacturing,Finance & Accounting,310,999%,1750000,2015-06-30,Tier 2,Onsite,
+21,Anchor Steel Global,chennai,manufacturing,finance & accounting,312,13%,"17,50,000",30-06-2015,Tier 2,onsite,fin@anchorsteel.com
+22,Pinnacle Wealth Advisors,Mumbai,BFSI,Data & Analytics,268,,2400000.0,,Tier 1,Hybrid,ops@pinnaclewealth.in
+23,Pinnacle Wealth Advisors,mumbai,bfsi,data and analytics,268,10%,"24,00,000",2018-08-12,Tier 1,hybrid,ops@pinnaclewealth.in
+24,Everest Auto Components,Pune,Manufacturing,Engineering,540,17%,1650000,,Tier 2,Hybrid,
+25,Everest Auto Components ,pune ,manufacturing ,engineering ,545,17.2%,"16,50,000",2016,Tier 2,Hybrid,talent@everestauto.com
+26,Lumen Energy Analytics,Gurugram,Energy,Data & Analytics,175,,,2021-02-18,Tier 3,Remote,hr@lumenenergy.com
+27,Meridian Travel Tech,Bengaluru,Travel,Engineering,410,19%,1950000,18-02-2020,Tier 2,hybrid,
+28,Meridian Travel Tech,Bengaluru,travel,Engineering,415,,"19,50,000",2020-02-18,Tier 2,Hybrid,recruit@meridiantravel.com
+29,Cobalt Cyber Defense,Hyderabad,Technology,Engineering,ERROR,21%,2900000,2019-04-05,Tier 1,onsite,
+30,Cobalt Cyber Defense,hyderabad,technology,engineering,690,21.4%,"29,00,000",05/04/2019,Tier 1,Onsite,security@cobaltcyber.com
+31,Harbor Freight Global,Chennai,Logistics,Supply Chain,225,,1300000,2022,Tier 3,Hybrid,
+32,Ridgeline Consumer Bank,Mumbai,BFSI,Finance & Accounting,890,,,2014-03-01,Tier 1,onsite,
+33,Ridgeline Consumer Bank,mumbai,bfsi,finance and accounting,895,12.8%,"20,50,000",01-03-2014,Tier 1,Onsite,fin.team@ridgelinebank.com
+34,Falcon Aerospace R&D,Bengaluru,Aerospace,R&D,610,,3400000,2013,Tier 1,Hybrid,
+35,Falcon Aerospace R&D,bengaluru,aerospace,r&d,615,9%,"34,00,000",unknown,tier 1,hybrid,rnd@falconaero.com
+36,Sable Consumer Insights,Gurugram,Retail,Data & Analytics,140,,980000,2023-01-20,Tier 3,Remote,
+37,Sable Consumer Insights,gurgaon,retail,data & analytics,142,23%,"9,80,000",20-01-2023,Tier 3,remote,insights@sableci.com
+38,Terra Agri Systems,Pune,Agriculture,Operations,,,,,,,
+39,Windmark Utilities GCC,Noida,Energy,Engineering,330,,1850000,2017-10-11,Tier 2,Hybrid,
+40,Windmark Utilities GCC,noida,energy,engineering,335,15%,"18,50,000",11-10-2017,Tier 2,hybrid,ops@windmarkutil.com
+41,Crestview Capital Ops,Mumbai,BFSI,Operations,760,,2050000,2019,Tier 1,onsite,
+42,Crestview Capital Ops,mumbai,bfsi,operations,765,11%,"20,50,000",2019-06-01,Tier 1,Onsite,capital.ops@crestview.com
+43,Brightpath EdTech Hub,Hyderabad,Education,Content & Design,88,,,2022-11-05,Tier 3,Remote,
+44,Brightpath EdTech Hub,hyderabad,education,content and design,90,27%,1250000,05-11-2022,Tier 3,remote,edu@brightpathedu.com
+45,Solstice Semiconductor,Bengaluru,Technology,R&D,505,,3650000,2012-05-19,Tier 1,Hybrid,
+46,Solstice Semiconductor,bengaluru,technology,r&d,510,8.9%,"36,50,000",19/05/2012,Tier 1,hybrid,semis@solstice.com
