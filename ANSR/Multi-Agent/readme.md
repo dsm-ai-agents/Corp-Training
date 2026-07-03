@@ -30,16 +30,16 @@ Each agent builds on the previous one's output, relying purely on reasoning rath
 3. In the model field, enter: `nvidia/nemotron-3-super-120b-a12b:free`
 4. Save the configuration
 
-### Step 4: Add Simple Memory to Orchestrator
+### Step 4: Add Simple Memory to Orchestrator (Optional)
 
 1. Inside the AI Agent node, click **"Memory"**
 2. Select **"Simple Memory"**
-3. This allows follow-up questions in the conversation
+3. This is only useful for multi-turn conversations (follow-up questions across messages). The PORR chain itself runs in a single pass, so memory is not required for the core workflow.
 
 ### Step 5: Add the Problem Agent (Tool)
 
 1. Inside the AI Agent node, click **"Tool"**
-2. Select **"Problem"** (this is a sub-agent)
+2. Add an **"AI Agent"** as a tool and name it **"Problem"**
 3. Configure the Problem agent:
 
 **Chat Model:**
@@ -50,7 +50,7 @@ Each agent builds on the previous one's output, relying purely on reasoning rath
 ### Step 6: Add the Options Agent (Tool)
 
 1. Back in the main AI Agent, click **"Tool"** again
-2. Select **"Options"** (second sub-agent)
+2. Add an **"AI Agent"** as a tool and name it **"Options"**
 3. Configure the Options agent:
 
 **Chat Model:**
@@ -61,7 +61,7 @@ Each agent builds on the previous one's output, relying purely on reasoning rath
 ### Step 7: Add the Risks Agent (Tool)
 
 1. Back in the main AI Agent, click **"Tool"** again
-2. Select **"Risks"** (third sub-agent)
+2. Add an **"AI Agent"** as a tool and name it **"Risks"**
 3. Configure the Risks agent:
 
 **Chat Model:**
@@ -72,7 +72,7 @@ Each agent builds on the previous one's output, relying purely on reasoning rath
 ### Step 8: Add the Recommendation Agent (Tool)
 
 1. Back in the main AI Agent, click **"Tool"** again
-2. Select **"Recommendation"** (fourth sub-agent)
+2. Add an **"AI Agent"** as a tool and name it **"Recommendation"**
 3. Configure the Recommendation agent:
 
 **Chat Model:**
@@ -82,7 +82,9 @@ Each agent builds on the previous one's output, relying purely on reasoning rath
 
 ### Step 9: Configure System Prompts
 
-Now you need to add the system prompts for each agent. Copy and paste these exactly:
+Now you need to add the system prompts for each agent. Copy and paste these exactly.
+
+**A note on sequencing:** The Orchestrator prompt below describes a clean Problem → Options → Risks → Recommendation pipeline. In n8n, sub-agents attached as tools are invoked at the orchestrator model's discretion, so strict order is guided by the prompt rather than enforced by the architecture. In practice the model follows the described sequence reliably for this workflow, but it is a prompt-level instruction, not a hard constraint.
 
 ---
 
@@ -364,7 +366,7 @@ The PORR Framework forces structured thinking:
 - **Risks** surfaces blind spots before commitment
 - **Recommendation** synthesizes everything into action
 
-Each agent reasons independently on its specific task, preventing the shortcuts a single-pass answer would take.
+Each agent is scoped to one task, which stops the model from jumping straight to a conclusion. Note that all four agents use the same underlying model, so this is disciplined stage-by-stage reasoning rather than genuinely independent viewpoints.
 
 ---
 
@@ -378,9 +380,9 @@ The difference:
 - Brainstorming = Opinions and gut feelings
 - PORR = Step-by-step reasoning
 - Traditional AI = One-shot answers
-- PORR Framework = Multi-perspective validation
+- PORR Framework = Staged, scope-limited reasoning
 
-Each agent challenges the previous one's output by reasoning through its specific lens.
+Each agent challenges the previous one's output by reasoning through its specific lens. All stages share the same model, so the value comes from forced structure, not from independent perspectives.
 
 ---
 
