@@ -1,11 +1,8 @@
 # Assignment 1 — Data Cleaning, CXO Presentation & Dashboard
 
-## Client
-ANSR — global GCC (Global Capability Center) enablement and consulting firm.
+
 
 ## Background
-ANSR helps global enterprises set up and scale GCCs in India and other markets. Attached is a raw extract pulled from an internal client-tracking sheet covering GCCs across cities, industries, and functions — headcount, attrition, salary, setup dates, and delivery model.
-
 The extract was compiled from multiple regional teams and has not been cleaned.
 
 ## Dataset
