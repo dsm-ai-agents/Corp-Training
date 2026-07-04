@@ -1,0 +1,345 @@
+{
+  "name": "AIAA PORR",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -16,
+        16
+      ],
+      "id": "c23d2535-b995-478e-962c-f09339c8ebf0",
+      "name": "When chat message received",
+      "webhookId": "c6bfe041-3ffd-42f2-8b1e-bc24e8281864"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        240,
+        256
+      ],
+      "id": "1ab29c33-0456-40cc-afb0-cb52c1382b6b",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        48,
+        256
+      ],
+      "id": "2b98e2fc-e2bf-4d4c-bb0b-46ed81d5a917",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "0wZUGEHNOwFCAHSU",
+          "name": "OpenRouter account 69"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are the Orchestrator Agent for the model Problem → Options → Risks → Recommendation.\n\nProcess:\n1. Send the user's question to the Problem Agent and wait for its output.\n2. Send the question plus the Problem output to the Options Agent.\n3. Send the question, Problem, and Options outputs to the Risks Agent.\n4. Send all outputs to the Recommendation Agent.\n5. Combine everything into the final structure:\n\nProblem:\nOptions:\nRisks:\nRecommendation:\n\nRules:\n* Do not create new content. Only merge.\n* Do not assume facts or examples that were not provided by the agents.\n* Clearly separate each section.\n* If any output is limited, include it as is."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        192,
+        16
+      ],
+      "id": "c177f61e-25bb-4c82-9ac3-64aaa817de0e",
+      "name": "Orchestrator AI Agent"
+    },
+    {
+      "parameters": {
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "You are the Problem Agent.\n\nProcess:\n1. Use the user's question and your own reasoning to define the problem clearly.\n\nRules:\n* Do not guess or assume anything beyond what the user has stated.\n* Do not produce solutions, options, risks, or recommendations.\n* If the question lacks sufficient context, state the limitation.\n\nOutput: A clear factual definition of the problem."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        352,
+        224
+      ],
+      "id": "f556b091-46a2-4dcd-ab95-6f8d2c61af0b",
+      "name": "Problem Agent"
+    },
+    {
+      "parameters": {
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "You are the Options Agent.\n\nProcess:\n1. Use the user's question and the Problem definition.\n2. Generate multiple realistic and grounded solution options through reasoning.\n\nRules:\n* Do not present ideas as facts.\n* No risk analysis.\n* No recommendation.\n\nOutput: A list of 3 to 6 grounded options."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        624,
+        224
+      ],
+      "id": "1227ad42-37f3-4381-975c-4cc66c2b184d",
+      "name": "Option Agent"
+    },
+    {
+      "parameters": {
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "You are the Risks Agent.\n\nProcess:\n1. Use the user's question, the Problem output, and the Options output.\n2. Identify realistic risks, weaknesses, or limitations through reasoning.\n\nRules:\n* Do not invent case studies, numbers, or examples.\n* All risks must connect logically to the Problem or the Options.\n* No solutions. No recommendations.\n\nOutput: A grounded list of risks."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        896,
+        224
+      ],
+      "id": "963c837d-5bc0-448f-90dc-450d108b2977",
+      "name": "Risk Agent"
+    },
+    {
+      "parameters": {
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "You are the Recommendation Agent.\n\nProcess:\n1. Use the user's question, Problem, Options, and Risks.\n2. Choose the most logical option and provide a simple recommendation.\n\nRules:\n* No new facts. No assumptions. No fabrication.\n* Recommendation must be explicitly based on the previous outputs.\n* If the evidence is unclear, mention limitations.\n\nOutput: A grounded and practical recommendation."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        1168,
+        224
+      ],
+      "id": "55cd56a1-ab53-4013-9865-6b32ec9a34f9",
+      "name": "Recommendation Agent"
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        352,
+        432
+      ],
+      "id": "c01f26fb-ce8c-46aa-8735-c5a7ef686567",
+      "name": "OpenRouter Chat Model1",
+      "credentials": {
+        "openRouterApi": {
+          "id": "0wZUGEHNOwFCAHSU",
+          "name": "OpenRouter account 69"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        624,
+        432
+      ],
+      "id": "1c3dbed8-999a-4c11-b8c4-44810062b78b",
+      "name": "OpenRouter Chat Model2",
+      "credentials": {
+        "openRouterApi": {
+          "id": "0wZUGEHNOwFCAHSU",
+          "name": "OpenRouter account 69"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        896,
+        432
+      ],
+      "id": "1bbe75e1-0680-4740-9e84-5b44a898a5e0",
+      "name": "OpenRouter Chat Model3",
+      "credentials": {
+        "openRouterApi": {
+          "id": "0wZUGEHNOwFCAHSU",
+          "name": "OpenRouter account 69"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        432
+      ],
+      "id": "560c5c62-8617-40ac-a720-fcf16d832304",
+      "name": "OpenRouter Chat Model4",
+      "credentials": {
+        "openRouterApi": {
+          "id": "0wZUGEHNOwFCAHSU",
+          "name": "OpenRouter account 69"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Problem Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Option Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Risk Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recommendation Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Problem Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Option Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Risk Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Recommendation Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "dd99afb5-d06d-46b0-a7bb-60c188c053fc",
+  "meta": {
+    "instanceId": "966c9717c649ff58138114ad4ec0792ba6c6dbbaefbc75a95d7e5ed34f041958"
+  },
+  "nodeGroups": [],
+  "id": "PnB80iSdyrFRLKyC",
+  "tags": []
+}
