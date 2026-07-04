@@ -1,8 +1,5 @@
 # Assignment 2 — Research-Driven Email Sequence
 
-## Client
-ANSR — global GCC (Global Capability Center) enablement and consulting firm.
-
 ## Background
 Attached is a set of research notes on the GCC expansion market — buyer pain points, objections, ICP signals, and what messaging tends to resonate with prospective clients. This mirrors the kind of raw research input ANSR's growth/marketing team would work from.
 
