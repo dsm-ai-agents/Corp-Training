@@ -1,0 +1,294 @@
+MEETING TRANSCRIPT
+=====================================================================
+Project        : Marston & Vale — India GCC Feasibility & Operating Model
+Meeting        : Client Kickoff Session
+Date / Time    : 12 August 2026, 14:00–15:30 BST (18:30–20:00 IST)
+Location       : Microsoft Teams
+Recorded by    : Rhea Nathan (ANSR Consultant)
+Confidentiality: Client Confidential
+
+Attendees:
+  Client (Marston & Vale)
+    - Helena Ashcroft     — Chief Financial Officer (Executive Sponsor)
+    - Callum Radcliffe    — Chief Operating Officer
+    - David Okafor        — Chief HR Officer
+    - Priya Menon         — Group Head, Transformation Office
+    - James Whitfield     — Head of Group Legal (attended first 30 min only)
+
+  ANSR
+    - Rhea Nathan         — Consultant / Note-taker
+    - Anjali Krishnan     — Talent & Compensation Specialist
+
+=====================================================================
+
+[14:02] Helena Ashcroft:
+Thanks everyone for making the time. Before we dive in — Siddharth, I want to
+be very clear about what "success" looks like for us at the end of your
+engagement. We are NOT looking for a validation exercise. If your view at the
+end of the twelve weeks is that we shouldn't do this, or shouldn't do it in
+India, or shouldn't do it at the scale we're currently thinking — say so.
+The Board has explicitly asked for an independent view.
+
+[14:03] Siddharth Mathapati:
+Understood, Helena, and thank you. That's how we prefer to work. What we'll
+give you at the end is a recommendation with three things attached to it — a
+clear "why", the top three risks with mitigations, and the two or three
+scenarios where we'd change our mind. Before we get into the substance, can
+I ask you to walk us through what actually triggered this? I've read the
+Board deck from March but I'd like to hear it from you.
+
+[14:04] Helena Ashcroft:
+Three things. One — our COO cost stack. Callum can go into detail, but net-net
+we're running 18 to 22 percent above the retail peer set on functions that
+should be commoditizing. Two — we've had an eighteen-month tech
+modernization program that is materially behind schedule, and the honest
+reason is that we cannot hire the data engineering and cloud security talent
+we need in the UK. And three — three of our largest competitors have
+announced India GCC scale-ups in the last twelve months. If we don't move,
+we will be structurally disadvantaged.
+
+[14:06] Callum Radcliffe:
+Just to add to point one — the cost issue is not uniformly across functions.
+Our commercial functions, our stores, our supply chain — those benchmark
+reasonably. The cost drift is concentrated in Technology, Data, Finance
+Operations and Customer Support. Which not coincidentally are the four
+functions we're asking you to model for the GCC.
+
+[14:07] Siddharth Mathapati:
+That's helpful because it tells us the GCC scope is already validated by the
+cost analysis. Let me ask about ambition. When you say "GCC" — are you
+thinking of this as a shared services back office to run operations more
+cheaply, or are you thinking of it as a capability center that will actually
+own some of your product, engineering and analytics roadmap?
+
+[14:08] Helena Ashcroft:
+The Board decision was very clear on this. It has to be a capability center.
+If it's just a back office, it doesn't solve our tech modernization problem.
+The Chairman actually used the phrase "second home for the company", which
+some people found dramatic, but it captures the intent.
+
+[14:09] David Okafor:
+Can I jump in on that? I need to flag the internal communications sensitivity
+here. When word of this gets out — and it will — the union in Cork will
+frame this as offshoring. We had a very difficult 2023 with the payroll
+consolidation, and we cannot repeat that. So whatever we build, we need to
+be able to say credibly that we are not moving existing UK or Irish jobs,
+we are building new capability that we cannot otherwise access.
+
+[14:10] Siddharth Mathapati:
+Noted, and this is one of the most common patterns we see in first-time UK
+GCCs. Two things typically help. First, in the first 18 months, the vast
+majority of what you'll build in India is genuinely additive — teams and
+capabilities you were failing to hire in the UK. That's an honest framing,
+not spin. Second, we recommend committing publicly to zero UK/IE
+redundancies attributable to the GCC for a defined period, typically 24
+months. This gets tested in practice, and CFOs sometimes get uncomfortable
+with it, but it's the single biggest de-risker of the internal narrative.
+
+[14:11] Helena Ashcroft:
+I'm comfortable with 24 months. Callum?
+
+[14:11] Callum Radcliffe:
+Yes.
+
+[14:12] David Okafor:
+Thank you. That will help enormously.
+
+[14:13] Siddharth Mathapati:
+Let's talk headcount and shape. What's your current thinking?
+
+[14:14] Callum Radcliffe:
+Draft numbers, and Helena has been pushing back on some of these. We're
+thinking 600 to 800 FTE by end of Year 3. Tech and data around 55 percent,
+Finance Ops 20 percent, HR Ops 10 percent, Customer Support 15 percent. On
+the experience mix, our instinct is a pyramid that's heavy at the bottom —
+roughly 65 percent junior, 30 percent mid, 5 percent senior.
+
+[14:15] Siddharth Mathapati:
+On headcount and functional split, that's directionally sensible and matches
+what we see in comparable retail GCCs at year three. I do want to challenge
+you on the experience mix, though, because I think if you go in with a 65/30/5
+pyramid, you will not build the capability center you just told me you want
+to build. In our dataset, GCCs that start below about 15 percent senior in
+the first two years consistently underperform on ownership handover, and
+the UK teams end up doing more of the design work, not less. Which was
+supposed to be the whole point.
+
+[14:16] Helena Ashcroft:
+That aligns with my instinct, actually. What mix would you recommend?
+
+[14:17] Siddharth Mathapati:
+We'll come back with numbers after the benchmark, but I'd expect us to land
+somewhere close to 45 percent junior, 35 percent mid, 15 percent senior,
+5 percent leadership. The senior layer is what buys you the credibility to
+actually own product and platform roadmaps. It costs more per head, but
+your total delivered cost per unit of capability is lower — because you're
+not rebuilding the design work in the UK.
+
+[14:18] Callum Radcliffe:
+Fair. Let's see the numbers.
+
+[14:19] Priya Menon:
+Siddharth, on locations. Our starting hypothesis is Bengaluru because it has
+the name recognition. Do you agree, or is there a case for elsewhere?
+
+[14:20] Siddharth Mathapati:
+Bengaluru is likely to be the answer for the primary hub — but I'd caution
+against locking it in before we've looked at the data. Two things have
+shifted in the last eighteen months. Hyderabad has become materially
+cheaper on infrastructure and their state government has a genuinely faster
+single-window clearance — you can be operationally live about six weeks
+sooner than Bengaluru. And Pune has emerged as the sharpest talent market
+for Finance Operations specifically, with lower attrition than either
+Bengaluru or Hyderabad. So the interesting question isn't "which single
+city" — it's whether a primary hub plus a smaller spoke gives you better
+economics and lower risk than a single-site build.
+
+[14:22] Helena Ashcroft:
+Interesting. Please model both.
+
+[14:22] Siddharth Mathapati:
+Will do. To be clear — I'm not recommending a two-city build in Year 1.
+Splitting the Tech tower across two cities in your first year is one of the
+top three execution risks in GCCs of this size. What we'd typically
+recommend is single-city in Year 1, add the second city in Year 2 for
+specific towers — most likely Finance Ops.
+
+[14:23] James Whitfield:
+Sorry to interrupt — before I have to drop for another call, can we cover
+the entity structure question briefly? Legal needs to start scoping.
+
+[14:24] Siddharth Mathapati:
+Yes, quickly. Our recommendation for M&V's profile is a wholly-owned Indian
+subsidiary, a private limited company. Not a branch office, not an LLP.
+This gives you the cleanest PE profile, standard for a first-time entrant.
+Whether you set up one entity or two — one for Tech and one for Services —
+is a tax optimization question we can come back on, but for planning
+purposes assume a single Pvt Ltd.
+
+[14:25] James Whitfield:
+That aligns with our internal view. Thank you. Apologies, I need to drop.
+
+[14:26] Siddharth Mathapati:
+Understood. One more question for the group — Helena, the CFO ask was for
+35 to 45 percent cost reduction versus the UK baseline by Year 3. Can we
+stress-test that number? Is that the ambition, or is it the commitment?
+
+[14:27] Helena Ashcroft:
+It's the ambition in the Board pack. If your work comes back and says 30 to
+40 is realistic, I would rather adjust the ambition than land in a place
+where we've overpromised. I'd rather commit to 35 and deliver 45 than the
+other way around.
+
+[14:28] Siddharth Mathapati:
+Good, that's the right posture. My working expectation, before benchmarks,
+is that a well-designed capability-center model in Bengaluru with a Finance
+Ops spoke in Pune should deliver about 40 to 45 percent blended saving by
+Year 3, going up to closer to 48 percent by Year 5 as the pyramid matures.
+But let us actually run the numbers.
+
+[14:29] Callum Radcliffe:
+What about timelines? Helena has been very clear she wants boots on the
+ground by February.
+
+[14:30] Siddharth Mathapati:
+Feb 2027 is doable but tight. It rules out anything that needs a new SEZ
+approval, so we'd be looking at established IT parks with ready-to-move
+space. Realistic path — Board approval by mid-November, entity setup and
+space finalized in parallel through December and January, first 30 to 50
+hires onboarded in February. Whether the full first-year ramp of around
+180 FTE lands on time depends primarily on how quickly you get the Site
+Leader on board. That hire is on the critical path and I'd strongly
+recommend we start it now, in parallel with the study.
+
+[14:32] Helena Ashcroft:
+Agreed. Can ANSR run that search?
+
+[14:32] Siddharth Mathapati:
+Yes, we'll run it as a separate workstream. We'll have a target list of
+eight to ten candidates by end of September.
+
+[14:33] David Okafor:
+On the Customer Support scope — we should talk about GDPR. Some of those
+workflows touch UK and EU PII. Our DPO will need to sign off before we
+finalize what actually moves.
+
+[14:34] Siddharth Mathapati:
+Correct, and this is important. We'll schedule a data classification
+workshop with your DPO in the first three weeks. Depending on the outcome
+we may need to segregate the CS environment on Azure UK South, keep the
+data in-region, and just have the operators in India. That's a very common
+pattern and it works.
+
+[14:36] Helena Ashcroft:
+Good. Let's talk about what you need from us to move fast.
+
+[14:36] Siddharth Mathapati:
+Four things. Access to your current UK compensation data for the roles in
+scope, so we can build a like-for-like cost model. Twenty to twenty-five
+one-hour interviews with function heads across Tech, Data, Finance, HR and
+CS. Priya's transformation team as our day-to-day counterpart. And
+introductions to your DPO and Head of Group Tax before the end of the month.
+
+[14:37] Priya Menon:
+Comp data by Friday. I'll schedule the function-head interviews next week.
+DPO and Tax introductions by Wednesday.
+
+[14:38] Helena Ashcroft:
+Good. Siddharth — what's the moment where I should worry?
+
+[14:38] Siddharth Mathapati:
+Three moments. If we can't get the Site Leader shortlist to a credible place
+by end of September, the February go-live is at risk. If the DPO scope
+conversation lands in a place where more than about 30 percent of CS is
+carved out, the CS business case weakens materially. And if the UK teams
+don't engage with the interview process — which is the most common failure
+mode in Weeks 3 to 5 of engagements like this — the recommendation ends up
+under-informed.
+
+[14:40] Helena Ashcroft:
+Callum, that last one is your problem. Please make sure the UK function
+heads make time.
+
+[14:40] Callum Radcliffe:
+Yes. I'll send a note today.
+
+[14:41] Helena Ashcroft:
+Right. Anything else from the ANSR side?
+
+[14:41] Siddharth Mathapati:
+One clarifying question, and then we're done. The Board is expecting a
+recommendation on November 12. Is that a status update or a
+decision-forcing session?
+
+[14:42] Helena Ashcroft:
+Decision-forcing. If we don't approve on November 12, we lose the year.
+
+[14:42] Siddharth Mathapati:
+Understood. We'll work backward from that.
+
+[14:43] Helena Ashcroft:
+Thank you all. Rhea, we'll see the notes and next-steps by end of day
+tomorrow?
+
+[14:43] Rhea Nathan:
+Yes, by close of business tomorrow UK time.
+
+[15:28] Helena Ashcroft:
+Good. Thank you, everyone.
+
+[Meeting ended 15:30 BST]
+
+=====================================================================
+Action Items
+=====================================================================
+Owner              Action                                           Due
+-------------------------------------------------------------------------
+Priya Menon        Share UK compensation data for in-scope roles    Aug 15
+Priya Menon        Schedule 20–25 function-head interviews          Aug 22
+Priya Menon        Intros to DPO and Head of Group Tax              Aug 19
+Callum Radcliffe   Send note to UK function heads on engagement     Aug 13
+ANSR (Siddharth)   Start Site Leader search                         Aug 15
+ANSR (Anjali)      Kick off talent benchmark across 3 cities        Aug 15
+ANSR (Rhea)        Circulate notes + revised project plan           Aug 13
+Siddharth / Helena Weekly sponsor check-in — Fridays 08:00 BST      Ongoing

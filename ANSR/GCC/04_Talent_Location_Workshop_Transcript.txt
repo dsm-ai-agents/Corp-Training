@@ -1,0 +1,301 @@
+MEETING TRANSCRIPT
+=====================================================================
+Project        : Marston & Vale — India GCC Feasibility & Operating Model
+Meeting        : Talent, Location & Org Structure Working Session (Wk 6)
+Date / Time    : 18 September 2026, 13:00–14:45 BST (17:30–19:15 IST)
+Location       : Microsoft Teams
+Recorded by    : Rhea Nathan (ANSR)
+Confidentiality: Client Confidential
+
+Attendees:
+  Client (Marston & Vale)
+    - David Okafor        — Chief HR Officer
+    - Aditya Rangan       — Group CTO
+    - Fiona McBride       — Head of Data & Analytics
+    - Callum Radcliffe    — COO (joined at 13:45)
+    - Priya Menon         — Group Head, Transformation Office
+
+  ANSR
+    - Rhea Nathan         — Consultant
+    - Anjali Krishnan     — Talent & Comp Specialist
+
+=====================================================================
+
+[13:01] Siddharth Mathapati:
+Thanks for making the time. Today I want to close on three things. One,
+the recommended experience mix and pyramid. Two, the primary location and
+whether we're a single-city or a hub-and-spoke model. Three, the
+recommended org structure and who reports to whom. Anjali will walk us
+through the benchmark data first — Anjali, over to you.
+
+[13:02] Anjali Krishnan:
+Thanks Siddharth. Quick reminder on methodology. We benchmarked 47 GCCs in
+our dataset across the three shortlisted cities, filtered to retail, CPG,
+and adjacent verticals — so companies whose talent needs look similar to
+M&V's. On top of that, we ran a Naukri and LinkedIn active-candidate
+scrape in August, deduplicated it, and cross-referenced with our
+compensation panel. Six functions, three cities, three seniority bands.
+That's what feeds the numbers in the file we shared this morning.
+
+Two headlines. First, the Bengaluru premium over Hyderabad has compressed
+sharply — for senior data engineering it's down from 28 percent to 14
+percent in two years. Second, Pune's Finance Ops market is meaningfully
+better than either Bengaluru or Pune on both cost and stability — and
+this is the finding that pushes us toward a hub-and-spoke recommendation
+rather than a pure single-city build.
+
+[13:05] Aditya Rangan:
+Anjali, on the Bengaluru versus Hyderabad question specifically — my
+worry is quality, not cost. If I hire a senior data engineer in
+Hyderabad, am I actually getting the same person I'd get in Bengaluru?
+
+[13:06] Anjali Krishnan:
+Honest answer — at the senior end, no, not quite. Our skill index for
+Data and ML shows Bengaluru at 100, Hyderabad at 91. For Cloud and
+Platform Engineering the gap is smaller — Bengaluru 100, Hyderabad 96.
+Where I would place a bet on Hyderabad without hesitation is
+mid-band Tech — SDE II, Data Engineer with 4 to 8 years, Cloud engineers.
+For senior Data Science, over 10 years, Bengaluru is still the answer.
+
+[13:07] Aditya Rangan:
+That matches what I would have guessed. So the question isn't Bengaluru
+versus Hyderabad — it's whether we can afford Bengaluru.
+
+[13:08] Siddharth Mathapati:
+Correct. And based on the cost model in the second tab of the file, we
+can. A Bengaluru-primary build lands blended cost at about 41 percent
+below the UK baseline in Year 3, versus about 44 percent for Hyderabad
+and about 43 percent for Pune. The Bengaluru delta on cost is smaller
+than most people assume, and the delta on capability is larger. So on a
+risk-adjusted basis, Bengaluru is the right primary hub.
+
+[13:09] Fiona McBride:
+I want to pull on that thread. On Data and Analytics — what does the
+senior end of the market actually look like? I need principal-grade data
+scientists who can partner with my UK team as peers, not as executors.
+
+[13:10] Anjali Krishnan:
+For principal-grade — 12 plus years with real ownership experience — the
+Bengaluru pool is roughly three to four times deeper than Hyderabad and
+roughly six times deeper than Pune. This is the number that matters most
+for your specific ask, Fiona. You will not build the analytics
+capability you're describing in Hyderabad in Year 1.
+
+[13:11] Fiona McBride:
+That settles it for me on Data.
+
+[13:12] David Okafor:
+Can I ask about attrition? We've heard scary numbers about Bengaluru.
+
+[13:12] Anjali Krishnan:
+Bengaluru Tech attrition in our 2026 dataset averages 15.8 percent —
+lower than Hyderabad at 17.2 and much lower than Gurugram at 22.6. The
+"Bengaluru is worse on attrition" perception is about three to four
+years out of date. Where Bengaluru is worse is on senior engineering
+compensation inflation — 9 to 11 percent year on year versus about 7 to
+8 in Hyderabad. So you pay more to retain, but you do retain.
+
+[13:14] David Okafor:
+And Pune?
+
+[13:14] Anjali Krishnan:
+Pune is the lowest attrition of the three across the board. Tech 13.4,
+Finance Ops 11.1 percent. Which is unusually low. This is one of the two
+main reasons we recommend Pune for Finance Ops rather than keeping
+Finance Ops in Bengaluru.
+
+[13:15] David Okafor:
+What's the other reason?
+
+[13:15] Anjali Krishnan:
+The talent pool. Pune's active-candidate pool for Finance Ops is about
+36,500. Bengaluru is 28,000, Hyderabad 24,000. And more importantly, the
+Pune pool is disproportionately alumni of the large captives — Genpact,
+WNS, Accenture — which means they arrive already trained on the
+processes and controls that M&V's Finance Ops actually cares about. You
+get faster ramp and lower induction cost.
+
+[13:17] Siddharth Mathapati:
+David, this is the crux of the hub-and-spoke recommendation. If we put
+Finance Ops in Bengaluru, we're paying about 12 to 15 percent more for
+the same seat, we're absorbing higher attrition, and we're recruiting
+from a shallower pool. Splitting it out to Pune from Year 2 gives us
+better economics, better stability, and better ramp — with the trade-off
+that we manage a second city.
+
+[13:18] Callum Radcliffe (joined):
+Sorry — joined late. Are we landing on Bengaluru plus Pune?
+
+[13:19] Siddharth Mathapati:
+That's our recommendation, and the room is broadly aligned. Bengaluru is
+the primary hub from Day 1 — Tech, Data, Cloud and Security,
+Customer Support, Leadership. Pune stands up in Year 2 for Finance Ops
+and a small HR Ops CoE. Steady-state — around 560 in Bengaluru, around
+160 in Pune.
+
+[13:20] Callum Radcliffe:
+Why not Pune in Year 1 as well?
+
+[13:20] Siddharth Mathapati:
+Two reasons. One, execution focus — running one city well in Year 1 is
+hard enough for a first-time GCC; running two doubles the operational
+load on a Site Leader who's still building the team. Two, Finance Ops is
+not the tower you want in the first ninety days. You want Tech and Data
+in first, delivering visible wins, so the internal narrative in the UK
+lands as "capability we couldn't build here" — which is what David
+asked for at kickoff. Finance Ops in Month One reads too much like a
+back office and it colors everything after it.
+
+[13:22] David Okafor:
+That framing helps a lot.
+
+[13:22] Callum Radcliffe:
+Alright. Let's talk org structure. This is the piece I've been going back
+and forth on.
+
+[13:23] Siddharth Mathapati:
+We recommend a matrix. Site Leader at Managing Director grade, external
+hire, reporting solid-line to Callum. Each functional tower head —
+Tech, Data, Finance Ops, HR Ops, CS — reports solid-line to their
+counterpart in the UK, dotted-line to the Site Leader. Underneath, we
+use pod-based delivery — pods of 8 to 12 aligned to UK business units.
+And we overlay three Centers of Excellence — Data and AI, Cloud
+Platform, and Cybersecurity — funded centrally, drawing from all
+towers.
+
+[13:25] Aditya Rangan:
+I want to push back on the reporting lines. If my head of Tech in
+Bengaluru reports solid-line to me and dotted-line to the Site Leader,
+the Site Leader has no real authority. Isn't that the failure mode
+where the GCC ends up as five separate silos?
+
+[13:26] Siddharth Mathapati:
+It's a good challenge. It IS a failure mode when the Site Leader is
+weak. If you invert the reporting — solid-line to the Site Leader,
+dotted-line to global function heads — you get a different failure
+mode, which is that global functions underinvest in the GCC because
+they don't own it. In our dataset, of about eighty-plus first-time
+GCCs, the version that works best is solid-line to global function
+heads, dotted-line to Site Leader — BUT with two things attached. One,
+the Site Leader has explicit authority over people, culture, and site
+economics — so hiring, promotions above a certain level, and comp
+decisions require Site Leader sign-off. Two, the Site Leader sits on
+the global function heads' leadership team as a full member, not an
+observer.
+
+[13:29] Aditya Rangan:
+That's more nuanced than I've heard it described before. I can accept
+that.
+
+[13:29] David Okafor:
+On the Site Leader — how senior are we talking?
+
+[13:30] Siddharth Mathapati:
+Managing Director grade. Fifteen plus years, at least seven of which
+running a GCC or a captive in India. Probably an ex-MNC leader —
+someone who's built and scaled at least one center from 100 to 500 plus.
+Fully-loaded package around 2.2 to 2.8 crores. Non-negotiable.
+
+[13:31] David Okafor:
+That's a big number.
+
+[13:32] Siddharth Mathapati:
+It's the single highest-leverage line in the whole cost model. Every GCC
+we've seen fail in Year 2 or 3, without exception, under-invested at
+this hire. Every one that scaled to a real capability center over-invested.
+
+[13:33] David Okafor:
+Understood. I'll defend it.
+
+[13:33] Callum Radcliffe:
+On the experience pyramid — where did we land?
+
+[13:34] Anjali Krishnan:
+Recommendation is 45 percent at 0 to 3 years, 35 percent at 4 to 8, 15
+percent at 9 to 14, 5 percent at 15 plus. This is materially more senior
+than the original 65/30/5 draft, and it's the shape you need for the
+capability-center ambition. Cost impact is about 8 percent higher year-1
+comp, but roughly 22 percent lower rework rate from UK teams — which
+more than pays for it by end of Year 2.
+
+[13:36] Callum Radcliffe:
+Fine. That's approved subject to seeing the cost impact in the model.
+
+[13:36] Siddharth Mathapati:
+Two more things I want to close before we're done. First, back-office
+ratios. We're modeling one HR Ops person per 25 core FTE, one Finance
+Ops per 40, one IT support per 75, one facilities per 100, and one
+leadership plus PMO per 60. These are steady-state — in the ramp-up
+year we run about 40 percent hotter on each to build the plumbing
+before the core teams arrive.
+
+[13:37] David Okafor:
+Are those ratios normal? One per 25 for HR feels heavy.
+
+[13:38] Anjali Krishnan:
+It's what we see in well-run mid-size GCCs. Below one per 30 in HR you
+start dropping candidate experience, and in a hot Bengaluru market that
+directly hits your offer-to-join ratio. Below one per 45 in Finance you
+start seeing controls slippage. These are load-tested numbers, not
+theoretical.
+
+[13:39] David Okafor:
+Fine.
+
+[13:40] Siddharth Mathapati:
+Second and last — risks. Top three we want the Board to see. Site
+Leader hire slipping — mitigation is start the search now. Attrition
+shock in Year 2 — mitigation is a proper retention design at build, 25
+percent long-term incentive mix for L2 and L3. UK narrative going bad —
+mitigation is the 24-month no-redundancy commitment and joint UK-India
+pods for the first year. There are three more medium-severity risks in
+the file we shared, including GDPR scope for CS, real estate slippage
+in Bengaluru, and FX volatility.
+
+[13:42] Callum Radcliffe:
+Good. Priya, I want the Board deck to lead with the three high-severity
+risks, not bury them. Boards notice when consultants hide the risks.
+
+[13:42] Priya Menon:
+Noted.
+
+[13:43] Callum Radcliffe:
+Siddharth, are we ready for the pre-read to sponsors on the 5th?
+
+[13:43] Siddharth Mathapati:
+Yes. We'll circulate a version 1 draft next Thursday, and lock the
+final on October 3rd for the pre-read on the 5th.
+
+[13:44] Callum Radcliffe:
+Good. Thank you, everyone.
+
+[Meeting ended 14:45 BST]
+
+=====================================================================
+Decisions Locked
+=====================================================================
+1. Bengaluru = primary hub from Day 1 (Tech, Data, Cloud/Sec, CS,
+   Leadership, PMO). ~560 FTE at steady-state.
+2. Pune = spoke from Year 2 for Finance Ops + small HR Ops CoE.
+   ~160 FTE at steady-state.
+3. Experience mix: 45% L1 / 35% L2 / 15% L3 / 5% L4.
+4. Org structure: matrix. Function heads solid-line to global
+   counterparts, dotted-line to Site Leader. Site Leader has explicit
+   authority over people, culture, site economics.
+5. Site Leader = external MD-grade hire; search started.
+6. Back-office ratios: HR 1:25, Fin 1:40, IT 1:75, Facilities 1:100,
+   Leadership+PMO 1:60. Ramp-up year at ~1.4x these.
+
+=====================================================================
+Action Items
+=====================================================================
+Owner              Action                                           Due
+-------------------------------------------------------------------------
+ANSR (Anjali)      Update cost model with locked experience mix     Sep 22
+ANSR (Rhea)        Circulate v1 draft PPT                           Sep 25
+ANSR (Siddharth)   Site Leader shortlist to David + Callum          Sep 30
+Priya Menon        Lock DPO workshop date                           Sep 24
+Aditya Rangan      Confirm Tech tower Year 1 headcount (50 vs 60)   Sep 26
+Fiona McBride      Confirm Data tower Year 1 headcount              Sep 26
+David Okafor       Land 24-month no-redundancy commitment w/ ExCo   Oct 3
+ANSR / Client      Pre-read to Board sponsors                       Oct 5
