@@ -1,0 +1,64 @@
+SHOPSY AI REPORTING AND ANALYTICS TRAINING PACK
+Synthetic training data | 1-28 October 2026 | INR | Seed 29102026
+
+All generated records, IDs, store names, prices and outcomes are fictional.
+The source files remain unchanged. This is a simplified, normalized training model inspired by their columns, not a statistically representative expansion or a claim about Shopsy's performance.
+
+OPEN Shopsy_AI_Analytics_Training.xlsx for all ten datasets in one workbook.
+Use csv/ for Power BI, SQL, Python or individual uploads. Headers use snake_case.
+Give participants the workbook and Participant_Case_Studies.txt. Keep trainer_only/ private until the debrief. The dirty dataset is a separate exercise and must never be appended to clean sales.
+Source_Columns_and_First_Five_Rows.json preserves the complete source headers and five rows from each sample. Source_Relationship_Review.txt reports actual ID overlap.
+
+FILE MAP AND ROW GRAINS
+01_Seller_Master: 30 sellers. Unique seller_id. Shared seller reference for all seller-level analyses.
+02_Listing_Master: 120 listings. Unique listing_id. Product_id also unique in this simplified model. Many listings belong to one seller. Status, price and ATP are a 28 October snapshot.
+03_Daily_Sales: 3,094 rows. Unique sales_row_id; one listing/date/status aggregate. Orders are aggregate counts, not individual order IDs.
+04_Promotion_Optins: 120 rows. Unique listing_id + promotion_id. One promotion with eligibility and opt-in flags. Applies 15-28 October inclusive.
+05_Daily_Advertising: 1,680 rows. Unique date + campaign_id + brand_segment. Two disjoint reporting segments per campaign. One campaign per seller.
+06_Campaign_Performance: 60 rows. Unique campaign_id + brand_segment + period_start + period_end. Exact 28-day rollup of daily ads; do not append to daily ads.
+07_Listing_Health: 30 rows. Unique snapshot_date + seller_id + category. Exact rollup of the current listing master, not historical creation cohorts.
+08_Channel_Funnel: 84 rows. Unique date + traffic_channel. Daily incremental counts for a wider, independent platform population. NOT cumulative snapshots and NOT the sales sample population.
+09_Monthly_Seller_Sales: 120 rows. Unique month + seller_id + category + status. Exact rollup of daily sales. Do not append to daily sales.
+10_Challenge_Dirty_Sales: 201 rows. Corrupted copy of the first 200 clean sales records, plus one duplicate. Contains 11 deliberate defects. Unique-key assumptions intentionally fail here.
+
+SAFE RELATIONSHIPS
+Sales.listing_id -> Listing_Master.listing_id (many-to-one).
+Listing_Master.seller_id -> Seller_Master.seller_id (many-to-one).
+Promotion_Optins.listing_id -> Listing_Master.listing_id (one-to-one for this single promotion; future promotions would be many-to-one).
+Daily_Advertising.seller_id -> Seller_Master.seller_id (many-to-one).
+Listing_Health.seller_id -> Seller_Master.seller_id (many-to-one in general).
+Do not merge detailed sales directly with detailed ads: aggregate each to seller/date before joining. Confirm row counts and money totals before and after every join.
+Do not join campaign summary to daily ads then SUM summary measures. Campaign_id alone is not unique in either file.
+Funnel can be compared by date for context, but has a different population and no attribution link. Do not claim funnel orders equal sample sales orders or causally explain sales changes.
+Ad agency channel and funnel traffic_channel are different concepts. Do not join them as though the labels represented one dimension.
+
+MEASURE DEFINITIONS AND ASSUMPTIONS
+All *_inr fields are numeric Indian rupees; tax, settlement and margin are not modeled.
+gmv_inr = units * selling_price_inr. It is positive original booking value across all statuses, including cancellations and returns. Delivered GMV filters status=DELIVERED. Neither measure is accounting net revenue.
+orders <= units. Orders are additive synthetic aggregate counts; distinct real orders across listings cannot be inferred from the original source.
+Status is the state at 28 October, not a lifecycle event ledger. Late-October orders are less mature, so avoid naive early-versus-late return comparisons.
+current_fsp_inr is snapshot list price. selling_price_inr includes the modeled promotion discount. current_atp is available stock at the snapshot, not an additive daily measure. No replenishment or historical inventory ledger is supplied.
+eligible and opted_in are Boolean. Opted-in listings are eligible. discount_rate is a decimal fraction. Compare promotion periods carefully: the design is observational and not randomized.
+daily_budget_inr is 800 per campaign/day and REPEATS across its two segment rows. Take MAX per campaign/day, then sum across campaigns/days. Do not sum repeated budgets directly.
+impressions and clicks are additive advertising counts. CTR=SUM(clicks)/SUM(impressions). CPC=SUM(actual_spend_inr)/SUM(clicks).
+ROAS=SUM(attributed_revenue_inr)/SUM(actual_spend_inr). It is not profit or causal incremental return. Attribution is a synthetic allocation of delivered seller revenue to two disjoint campaign segments. attributed_units and attributed_revenue do not imply one fixed unit price.
+Channel funnel: Direct, PN and RT preserve sample labels. PN/RT business expansions require confirmation from the source owner. product_page_views, add_to_cart, checkout, payment and orders form a nested synthetic funnel. Each stage rate uses the immediately preceding stage. Overall order conversion=SUM(orders)/SUM(visits). Never average row conversion rates without weighting.
+active_instock_listings <= active_listings <= total_listings. Ratios use sums of counts, not averages of seller percentages.
+Zero denominators yield an unavailable rate, not zero. Preserve the distinction between missing and zero.
+
+SOURCE-TO-TRAINING MAPPING
+Sales Data.xlsx -> Daily_Sales + Listing_Master + Seller_Master. unit_creation_date becomes order_date; Sum of orders/units/gmv become orders/units/gmv_inr. Shared keys and statuses retained in normalized form. Ambiguous summed price/rating/stock fields are not reproduced as transaction measures.
+OPTIN Report.xlsx -> Promotion_Optins + Listing_Master. listing_id/product_id/seller_id retained. current_fsp/current_atp become current_fsp_inr/current_atp. Many date-named promotion flags become one explicit promotion record. Unexplained CLF/ENS/FP/TP statistics, fees and source share percentages are omitted rather than guessed.
+BM_RAW_DAY_LEVEL.xlsx -> Daily_Advertising. processing_ist_date becomes date; viewcount/actioncount/Actual_spend/attr_units/attr_revenue are modeled as impressions/clicks/actual_spend_inr/attributed_units/attributed_revenue_inr. These interpretations need source-owner validation for production use. brand is replaced by an explicit brand_segment grain. Unexplained overburn, cost adjustments and account hierarchies are omitted.
+BM_RAW.xlsx -> Campaign_Performance. Uses matching synthetic campaign IDs and a defined period; sums reconcile to Daily_Advertising. Source campaign start/end/status/budget semantics are not inferred.
+Shopsy_listing_health.xlsx -> Listing_Health. Counts retain their broad meaning. Source creation-year/week/month cohorts are deliberately replaced by one dated current snapshot, so it reconciles to Listing_Master. No historic inventory conclusions are supported.
+FK - BINDER.xlsx -> Monthly_Seller_Sales. Source year/month/status and sums become month/status/orders/units/gmv_inr. Common seller/category references replace inconsistent taxonomy. Price buckets are omitted because the source bucket basis is unclear.
+Marketing + Conversion Funnel -> Channel_Funnel. The wide hourly source is normalized into daily channel counts. Source Visits/Units/gross_orders concepts retained. Summary stage and source cumulative timing are omitted; new intermediate counts are synthetic. Training rates must be calculated from these counts.
+
+SUGGESTED 90-MINUTE SESSION
+10 min: inspect columns and ask AI for grains, keys and assumptions.
+15 min: build an evidence-backed sales report.
+20 min: join datasets safely and reconcile totals.
+15 min: investigate campaign and funnel changes.
+20 min: repair the dirty dataset and explain each rule.
+10 min: present a management brief and challenge unsupported AI conclusions.

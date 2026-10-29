@@ -1,0 +1,24 @@
+{
+  "checks": "Passed: keys, foreign keys, row arithmetic, sales/monthly reconciliation, ad reconciliation, funnel nesting",
+  "row_counts": {
+    "01_Seller_Master": 30,
+    "02_Listing_Master": 120,
+    "03_Daily_Sales": 3094,
+    "04_Promotion_Optins": 120,
+    "05_Daily_Advertising": 1680,
+    "06_Campaign_Performance": 60,
+    "07_Listing_Health": 30,
+    "08_Channel_Funnel": 84,
+    "09_Monthly_Seller_Sales": 120,
+    "10_Challenge_Dirty_Sales": 201
+  },
+  "controls": {
+    "sales_rows": 3094,
+    "gross_gmv_inr_all_statuses": 6008888.3,
+    "delivered_gmv_inr": 4138252.9,
+    "ad_spend_inr": 575067.24,
+    "attributed_revenue_inr": 1195238.98,
+    "intentional_quality_issues": 11,
+    "roas": 2.0784334367577606
+  }
+}

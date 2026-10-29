@@ -1,0 +1,45 @@
+AI REPORTING AND ANALYTICS: PARTICIPANT CHALLENGES
+All exercises use synthetic data. For every answer, provide the filters, numerator/denominator, supporting figures and limitations. Ask AI to show its query or calculation, then verify independently.
+
+1. Management performance brief (Beginner, 15 minutes)
+Prompt: Build a one-page October sales report showing booked GMV, delivered GMV, orders, units, and category contributions. Distinguish returns, cancellations and pending shipments. Give three actions supported by numbers.
+Deliverable: KPI table, daily trend, category ranking, 150-word executive narrative.
+Challenge: Explain why booked GMV and delivered GMV are different. Do not call either profit.
+
+2. The inflated report (Intermediate, 20 minutes)
+Prompt: Combine daily sales and advertising to report seller/date sales, spend and ROAS. State each input grain and validate money totals before and after joining.
+Deliverable: Aggregated join, control totals and a diagram of relationships.
+Challenge: Demonstrate what happens if detail is joined on seller_id alone. Identify repeated budgets and multi-segment campaigns.
+
+3. Advertising budget review (Intermediate, 15 minutes)
+Prompt: Compare 1-17 October with 18-28 October by category. Calculate daily average spend, weighted CPC and ROAS. Identify segments needing review and propose a capped budget experiment.
+Deliverable: Before/after table and ranked investigation list.
+Challenge: Periods have unequal lengths. ROAS is not incremental profit, and the data has no margin.
+
+4. Funnel incident investigation (Intermediate, 15 minutes)
+Prompt: Find the channel and dates with unusual payment-to-order conversion. Compare 20-23 October with adjacent days. Estimate additional orders if the affected traffic had achieved its earlier conversion rate, holding payment count fixed.
+Deliverable: Stage conversion table, incident window and a clearly labeled scenario estimate.
+Challenge: Use ratios of sums. Do not claim an actual payment-system outage or join these platform orders to the seller sample.
+
+5. Promotion effectiveness (Advanced, 20 minutes)
+Prompt: Compare opted-in versus eligible non-opted listings before and after 15 October. Use units per listing-day, delivered GMV, category controls and equal-length windows. Explain confounders and recommend an experiment.
+Deliverable: Cohort comparison and experiment proposal.
+Challenge: Missing sales rows are not automatically missing data; enumerate listing-days. Price discounts, availability, category mix and order maturity can bias comparisons. Correlation is not causal lift.
+
+6. Seller availability action plan (Intermediate, 15 minutes)
+Prompt: Rank sellers by inactive and out-of-stock listing shares, then compare with their delivered sales and ad spend. Produce a prioritized action list with owner names.
+Deliverable: Seller scorecard and rules for prioritization.
+Challenge: The stock data is one snapshot. Estimate potential recovery only with stated assumptions; do not present lost sales as observed fact.
+
+7. Data-quality rescue (Intermediate, 20 minutes)
+Prompt: Audit Challenge_Dirty_Sales without using the clean sales file. Test key uniqueness, referential integrity, dates, status values, missing fields, numeric types and GMV arithmetic. Separate safe corrections from records requiring quarantine.
+Deliverable: Issue log, cleaned/quarantined tables and a before/after reconciliation.
+Challenge: Do not fill missing business values with guesses. Use master data to resolve contradictions where possible.
+
+8. Challenge an AI-generated conclusion (Advanced, 10 minutes)
+Claim to assess: Promotions caused growth, advertising is profitable, stockouts explain all lost orders, and the PN conversion drop explains seller sales declines.
+Prompt: Evaluate each clause using only these datasets. Mark supported descriptions, unsupported causal statements and missing evidence. Rewrite as a defensible management paragraph.
+Deliverable: Claim/evidence/limitation table and corrected narrative.
+
+ASSESSMENT RUBRIC
+30% correct grains, joins and reconciliation; 25% metric calculations; 20% insight quality; 15% limitations and causal discipline; 10% clear reporting. An attractive dashboard with inflated totals does not pass.

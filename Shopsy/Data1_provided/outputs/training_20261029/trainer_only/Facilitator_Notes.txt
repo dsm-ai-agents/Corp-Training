@@ -1,0 +1,15 @@
+FACILITATOR NOTES — KEEP UNTIL DEBRIEF
+
+The generator plants these patterns; actual magnitudes must be calculated from the generated data.
+1. Electronics seller ad spend is multiplied by 1.8 from October 18; impressions increase 1.3x while attribution is not increased by that intervention. Explore CPC and ROAS deterioration with equal-day normalization.
+2. PN payment-to-order conversion is approximately 27% on October 20-23 versus approximately 48% otherwise. Integer rounding causes small differences. No actual incident cause is supplied.
+3. Opted-in listings receive a 10% discount and three extra modeled daily units from October 15. This constructed pattern is not real-world causal evidence. Use 1-14 vs 15-28, plus cohort/category controls.
+4. WomenFootwear modeled units fall on October 20-23, independently of the platform funnel. Do not accept claims linking those populations causally.
+5. Every 11th listing has zero snapshot stock and no generated sales after October 21. Every 17th is inactive throughout the model. These are generation rules, not inferred inventory history.
+6. Late delivered statuses are changed to READY_TO_SHIP after October 25, creating order maturity bias.
+7. Two segment rows share each campaign/day budget. Correct total budget: 30 campaigns * 28 days * INR 800 = INR 672,000. Summing the raw repeated budget gives twice that amount.
+8. The clean pack has no orphan IDs. The original five-row source samples have zero cross-file ID overlap. Learners should distinguish candidate relationships from demonstrated matches.
+
+Validation_and_Control_Totals.json provides independently calculated row counts and money totals. Data_Quality_Answer_Key.csv lists 11 deliberate defects. A single defect may trigger several audit rules; count affected records separately from failed rules. The duplicate is an extra row. Restoring every dirty value to the clean source is not always possible from the dirty file alone; reward quarantine and explicit uncertainty.
+
+Expected controls: clean sales 3,094 rows; total booking GMV INR 6,008,888.30; delivered GMV INR 4,138,252.90; ad spend INR 575,067.24; attributed revenue INR 1,195,238.98; aggregate ROAS about 2.07843x.

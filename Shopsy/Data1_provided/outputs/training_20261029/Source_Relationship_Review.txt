@@ -1,0 +1,28 @@
+SOURCE SAMPLE REVIEW
+All seven files contain five data rows.
+
+BM_RAW.xlsx <> BM_RAW_DAY_LEVEL.xlsx: campaign_id: 0 shared values
+BM_RAW.xlsx <> BM_RAW_DAY_LEVEL.xlsx: seller_id: 0 shared values
+BM_RAW.xlsx <> FK - BINDER.xlsx: seller_id: 0 shared values
+BM_RAW.xlsx <> OPTIN Report.xlsx: seller_id: 0 shared values
+BM_RAW.xlsx <> Sales Data.xlsx: seller_id: 0 shared values
+BM_RAW.xlsx <> Shopsy_listing_health.xlsx: seller_id: 0 shared values
+BM_RAW_DAY_LEVEL.xlsx <> FK - BINDER.xlsx: seller_id: 0 shared values
+BM_RAW_DAY_LEVEL.xlsx <> OPTIN Report.xlsx: seller_id: 0 shared values
+BM_RAW_DAY_LEVEL.xlsx <> Sales Data.xlsx: seller_id: 0 shared values
+BM_RAW_DAY_LEVEL.xlsx <> Shopsy_listing_health.xlsx: seller_id: 0 shared values
+FK - BINDER.xlsx <> OPTIN Report.xlsx: seller_id: 0 shared values
+FK - BINDER.xlsx <> Sales Data.xlsx: seller_id: 0 shared values
+FK - BINDER.xlsx <> Shopsy_listing_health.xlsx: seller_id: 0 shared values
+OPTIN Report.xlsx <> Sales Data.xlsx: listing_id: 0 shared values
+OPTIN Report.xlsx <> Sales Data.xlsx: product_id: 0 shared values
+OPTIN Report.xlsx <> Sales Data.xlsx: seller_id: 0 shared values
+OPTIN Report.xlsx <> Shopsy_listing_health.xlsx: seller_id: 0 shared values
+Sales Data.xlsx <> Shopsy_listing_health.xlsx: seller_id: 0 shared values
+
+Candidate joins are not proof of actual matches. No cross-file ID match is invented in the original samples.
+BM_RAW campaign IDs repeat across brands; daily ads also repeat campaign/date across brands.
+Sales repeats listing across status/date. Listing health has no listing_id and is a creation cohort aggregate.
+Funnel counts rise across hours: likely cumulative snapshots, but this needs owner confirmation. Do not sum these snapshots.
+Source dates differ: listing cohorts 2023, binder April 2026, sales/ads October 2026.
+The normalized training pack below intentionally creates a common October population and explicit grains.

@@ -1,0 +1,12 @@
+﻿sales_row_id,field,corrupt_value,expected_value,issue
+SYN-T00004,listing_id,SYN-L9999,SYN-L0001,Orphan listing ID
+SYN-T00013,seller_id, SYN-S001 ,SYN-S001,Whitespace in key
+SYN-T00021,order_date,2026-13-40,2026-10-21,Invalid date
+SYN-T00038,gmv_inr,-500,305,Negative GMV
+SYN-T00057,orders,,4,Missing order count
+SYN-T00076,units,0,2,Zero units with positive GMV
+SYN-T00093,status,delivered,DELIVERED,Status case mismatch
+SYN-T00112,seller_id,SYN-S030,SYN-S001,Seller conflicts with listing master
+SYN-T00131,gmv_inr,99999,3294,GMV does not equal units times price
+SYN-T00156,selling_price_inr,INR 285,569,Numeric field stored as text
+SYN-T00002,whole_row,duplicate,one row,Exact duplicate row
