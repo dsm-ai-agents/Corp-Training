@@ -1,0 +1,32 @@
+{
+  "synthetic": true,
+  "seed": 2026103007,
+  "historical_first_week": "2024-10-28",
+  "historical_last_week": "2026-10-19",
+  "planning_as_of": "2026-10-25",
+  "planned_week_starts": [
+    "2026-10-26",
+    "2026-11-02",
+    "2026-11-09",
+    "2026-11-16"
+  ],
+  "row_order": "Chronological; data row 1 excludes the CSV header. Dates are metadata, not model inputs.",
+  "split_data_rows": {
+    "train": "1-72",
+    "validation": "73-88",
+    "test": "89-104"
+  },
+  "validation": "Passed file readback, row/column counts, numeric ranges, positive outcomes and planned inputs within training ranges. No model trained or evaluated.",
+  "files": {
+    "historical_weekly_sales.csv": {
+      "rows": 104,
+      "columns": 4,
+      "sha256": "a3b037404d74a57164e3b313015fbfdba4749d3da00417cf0e7a15392a460507"
+    },
+    "planned_weeks.csv": {
+      "rows": 4,
+      "columns": 3,
+      "sha256": "0c533176b5c8ea3c10e04fc4572183ba04474e7ffaf4ab2b5144788e9486b767"
+    }
+  }
+}

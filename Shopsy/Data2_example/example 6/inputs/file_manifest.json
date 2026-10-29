@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "seed": 20261030,
+  "historical_outcomes_as_of": "2026-10-01",
+  "return_window_days": 30,
+  "validation": "Passed: file readback, row counts, unique transaction IDs, positive prices, discount ranges, both classes in each time split, no target in new purchases. No model trained or evaluated.",
+  "files": {
+    "historical_purchases.csv": {
+      "rows": 12000,
+      "bytes": 595519,
+      "sha256": "16ee14ec2c9929f3d6ab8fd10564373d6c43927793b93b9896ef8a91067385e0"
+    },
+    "new_purchases.csv": {
+      "rows": 500,
+      "bytes": 23815,
+      "sha256": "7551d38afc32a95f9f79ce9fa5db4772cdf7527b63115ee9b541f2a0e14faa6c"
+    }
+  }
+}
