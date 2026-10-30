@@ -1,0 +1,3 @@
+# Small PDFs can look like text to git; never convert their line endings.
+*.pdf binary
+*.xlsx binary
