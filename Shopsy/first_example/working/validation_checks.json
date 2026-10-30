@@ -1,0 +1,68 @@
+{
+  "raw_rows": 3094,
+  "merged_rows": 3094,
+  "raw_gmv": 6008888.3,
+  "gross_gmv": 6008888.3,
+  "booked_gmv": 5636041.8,
+  "delivered_gmv": 4138252.9000000004,
+  "ready_to_ship_gmv": 980313.4000000001,
+  "returned_gmv": 517475.5,
+  "cancelled_gmv": 372846.5,
+  "date_min": "2026-10-01",
+  "date_max": "2026-10-28",
+  "checks": [
+    {
+      "check": "no_nulls_sales",
+      "pass": true
+    },
+    {
+      "check": "no_bad_dates",
+      "pass": true
+    },
+    {
+      "check": "unique_sales_row_id",
+      "pass": true
+    },
+    {
+      "check": "unique_seller_id_master",
+      "pass": true
+    },
+    {
+      "check": "no_orphan_sales_sellers",
+      "pass": true
+    },
+    {
+      "check": "all_master_sellers_have_sales",
+      "pass": true
+    },
+    {
+      "check": "statuses_known",
+      "pass": true
+    },
+    {
+      "check": "units_x_price_equals_gmv",
+      "pass": true
+    },
+    {
+      "check": "units_ge_orders",
+      "pass": true
+    },
+    {
+      "check": "join_row_count_equals_raw",
+      "pass": true
+    },
+    {
+      "check": "merged_gmv_equals_raw_gmv",
+      "pass": true
+    },
+    {
+      "check": "booked_plus_cancelled_equals_gross",
+      "pass": true
+    },
+    {
+      "check": "delivered_ready_returned_equals_booked",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

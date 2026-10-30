@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T22:57:44+05:30",
+  "action": "draft",
+  "recipients": ["datasciencemasterminds@gmail.com"],
+  "subject": "Regional Performance Dashboard | Jan–Sep 2026",
+  "draft_id": "r-6919488829723268013",
+  "message_id": "1a18dda4bf5f74e7",
+  "thread_id": "1a18dda4bf5f74e7",
+  "view_url": "https://mail.google.com/mail/?authuser=datasciencemasterminds@gmail.com#all?compose=thread-f:1880496544082261223%2Bmsg-a:r-6919488829723268013",
+  "source_html": "outputs/dashboard_email.html",
+  "html_bytes": 73946,
+  "html_checks": {"contains_script": false, "under_100kb": true},
+  "sent": false
+}

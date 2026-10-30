@@ -1,0 +1,16 @@
+{
+  "file": "regional_transactions_100mb.csv",
+  "synthetic": true,
+  "seed": 20261029,
+  "encoding": "UTF-8",
+  "delimiter": ",",
+  "data_rows": 640393,
+  "columns": 21,
+  "bytes": 100000028,
+  "decimal_MB": 100.000028,
+  "MiB": 95.367,
+  "sha256": "2af0123cf165190365bcc112bc272ceaba849ea8dd18fb0d5ac4b844c3c7af3b",
+  "period_start": "2026-01-01",
+  "period_end": "2026-09-30",
+  "validation": "Every row checked for sequential unique transaction ID and amount arithmetic; complete row count verified."
+}

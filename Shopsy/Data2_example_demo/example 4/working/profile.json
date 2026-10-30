@@ -1,0 +1,623 @@
+{
+  "source_file": "inputs/regional_transactions_100mb.csv",
+  "processing": {
+    "rows_streamed": 640393,
+    "complete": true,
+    "sampled": false,
+    "python": "3.12.10",
+    "libraries": "standard library only"
+  },
+  "file_checks": {
+    "bytes_actual": 100000028,
+    "bytes_expected": 100000028,
+    "bytes_match": true,
+    "sha256_actual": "2af0123cf165190365bcc112bc272ceaba849ea8dd18fb0d5ac4b844c3c7af3b",
+    "sha256_expected": "2af0123cf165190365bcc112bc272ceaba849ea8dd18fb0d5ac4b844c3c7af3b",
+    "sha256_match": true,
+    "data_rows_actual": 640393,
+    "data_rows_expected": 640393,
+    "data_rows_match": true,
+    "columns_actual": 21,
+    "columns_expected": 21,
+    "columns_match": true,
+    "header": [
+      "transaction_id",
+      "customer_id",
+      "seller_id",
+      "order_date",
+      "order_hour",
+      "region",
+      "city",
+      "category",
+      "product_id",
+      "channel",
+      "payment_method",
+      "status",
+      "units",
+      "unit_price_inr",
+      "discount_rate",
+      "gross_amount_inr",
+      "discount_amount_inr",
+      "booked_amount_inr",
+      "refund_amount_inr",
+      "shipping_fee_inr",
+      "delivery_days"
+    ],
+    "rows_with_wrong_field_count": 0,
+    "all_passed": true
+  },
+  "columns": {
+    "transaction_id": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": null,
+      "distinct_capped": true,
+      "distinct_cap": 5000,
+      "distinct_count_note": "more than 5000 distinct values"
+    },
+    "customer_id": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": null,
+      "distinct_capped": true,
+      "distinct_cap": 5000,
+      "distinct_count_note": "more than 5000 distinct values"
+    },
+    "seller_id": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 1500,
+      "distinct_capped": false,
+      "distinct_cap": 5000
+    },
+    "order_date": {
+      "inferred_type": "date",
+      "type_parse_counts": {
+        "date": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 273,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "2026-01-01",
+      "max": "2026-09-30"
+    },
+    "order_hour": {
+      "inferred_type": "integer",
+      "type_parse_counts": {
+        "integer": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 24,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "0",
+      "max": "23",
+      "top_values": [
+        [
+          "13",
+          27024
+        ],
+        [
+          "2",
+          27001
+        ],
+        [
+          "3",
+          26983
+        ],
+        [
+          "16",
+          26834
+        ],
+        [
+          "7",
+          26829
+        ],
+        [
+          "10",
+          26799
+        ],
+        [
+          "9",
+          26795
+        ],
+        [
+          "15",
+          26761
+        ],
+        [
+          "14",
+          26716
+        ],
+        [
+          "0",
+          26713
+        ]
+      ],
+      "all_value_count": 24
+    },
+    "region": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 4,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "top_values": [
+        [
+          "North",
+          160877
+        ],
+        [
+          "East",
+          160218
+        ],
+        [
+          "West",
+          159933
+        ],
+        [
+          "South",
+          159365
+        ]
+      ],
+      "all_value_count": 4
+    },
+    "city": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 8,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "top_values": [
+        [
+          "Delhi",
+          80512
+        ],
+        [
+          "Jaipur",
+          80365
+        ],
+        [
+          "Kolkata",
+          80249
+        ],
+        [
+          "Mumbai",
+          80103
+        ],
+        [
+          "Bhubaneswar",
+          79969
+        ],
+        [
+          "Pune",
+          79830
+        ],
+        [
+          "Chennai",
+          79743
+        ],
+        [
+          "Bengaluru",
+          79622
+        ]
+      ],
+      "all_value_count": 8
+    },
+    "category": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 6,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "top_values": [
+        [
+          "Grocery",
+          107153
+        ],
+        [
+          "Home",
+          107084
+        ],
+        [
+          "Electronics",
+          106901
+        ],
+        [
+          "Furniture",
+          106656
+        ],
+        [
+          "Lifestyle",
+          106371
+        ],
+        [
+          "Footwear",
+          106228
+        ]
+      ],
+      "all_value_count": 6
+    },
+    "product_id": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": null,
+      "distinct_capped": true,
+      "distinct_cap": 5000,
+      "distinct_count_note": "more than 5000 distinct values"
+    },
+    "channel": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 5,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "top_values": [
+        [
+          "Organic",
+          128836
+        ],
+        [
+          "Paid_Search",
+          128030
+        ],
+        [
+          "Email",
+          127953
+        ],
+        [
+          "Social",
+          127849
+        ],
+        [
+          "Direct",
+          127725
+        ]
+      ],
+      "all_value_count": 5
+    },
+    "payment_method": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 4,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "top_values": [
+        [
+          "Wallet",
+          160811
+        ],
+        [
+          "Card",
+          160095
+        ],
+        [
+          "COD",
+          159855
+        ],
+        [
+          "UPI",
+          159632
+        ]
+      ],
+      "all_value_count": 4
+    },
+    "status": {
+      "inferred_type": "text",
+      "type_parse_counts": {
+        "text": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 4,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "top_values": [
+        [
+          "DELIVERED",
+          511560
+        ],
+        [
+          "RETURNED",
+          57829
+        ],
+        [
+          "CANCELLED",
+          45099
+        ],
+        [
+          "READY_TO_SHIP",
+          25905
+        ]
+      ],
+      "all_value_count": 4
+    },
+    "units": {
+      "inferred_type": "integer",
+      "type_parse_counts": {
+        "integer": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 5,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "1",
+      "max": "5"
+    },
+    "unit_price_inr": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 52,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "199.00",
+      "max": "2774.00"
+    },
+    "discount_rate": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 5,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "0.00",
+      "max": "0.20"
+    },
+    "gross_amount_inr": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 260,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "199.00",
+      "max": "13870.00"
+    },
+    "discount_amount_inr": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 677,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "0.00",
+      "max": "2774.00"
+    },
+    "booked_amount_inr": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 1247,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "159.20",
+      "max": "13870.00"
+    },
+    "refund_amount_inr": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 1248,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "0.00",
+      "max": "13870.00"
+    },
+    "shipping_fee_inr": {
+      "inferred_type": "decimal",
+      "type_parse_counts": {
+        "decimal": 640393
+      },
+      "null_blank_count": 0,
+      "non_blank_count": 640393,
+      "distinct_count": 3,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "0.00",
+      "max": "49.00"
+    },
+    "delivery_days": {
+      "inferred_type": "integer",
+      "type_parse_counts": {
+        "integer": 569389
+      },
+      "null_blank_count": 71004,
+      "non_blank_count": 569389,
+      "distinct_count": 10,
+      "distinct_capped": false,
+      "distinct_cap": 5000,
+      "min": "1",
+      "max": "10"
+    }
+  },
+  "quality": {
+    "tolerance_inr": "0.01",
+    "duplicate_transaction_id_count": 0,
+    "unique_transaction_ids": 640393,
+    "checks": {
+      "gross_ne_units_x_price": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      },
+      "discount_ne_round_gross_x_rate": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      },
+      "booked_ne_gross_minus_discount": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      },
+      "refund_ne_booked_for_returned": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      },
+      "refund_nonzero_for_non_returned": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      },
+      "units_not_positive": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      },
+      "unparseable_numeric": {
+        "failures": 0,
+        "pass": true,
+        "example_ids": []
+      }
+    },
+    "delivery_days_by_status": {
+      "CANCELLED": {
+        "blank": 45099,
+        "non_blank": 0
+      },
+      "DELIVERED": {
+        "blank": 0,
+        "non_blank": 511560
+      },
+      "READY_TO_SHIP": {
+        "blank": 25905,
+        "non_blank": 0
+      },
+      "RETURNED": {
+        "blank": 0,
+        "non_blank": 57829
+      }
+    },
+    "delivery_days_rule": "blank for CANCELLED/READY_TO_SHIP; populated for DELIVERED/RETURNED",
+    "delivery_days_rule_violations": 0,
+    "all_passed": true
+  },
+  "control_totals": {
+    "row_count": 640393,
+    "units_total": 1922717,
+    "sums_inr": {
+      "gross_amount_inr": "1992981058.00",
+      "discount_amount_inr": "166461354.70",
+      "booked_amount_inr": "1826519703.30",
+      "refund_amount_inr": "164809285.60",
+      "shipping_fee_inr": "16675608.00"
+    },
+    "effective_discount_rate_sum_discount_over_sum_gross": "0.083524",
+    "rows_by_status": {
+      "CANCELLED": 45099,
+      "DELIVERED": 511560,
+      "READY_TO_SHIP": 25905,
+      "RETURNED": 57829
+    },
+    "sums_by_status_inr": {
+      "CANCELLED": {
+        "rows": 45099,
+        "gross_amount_inr": "140085183.00",
+        "discount_amount_inr": "11710078.50",
+        "booked_amount_inr": "128375104.50",
+        "refund_amount_inr": "0.00",
+        "shipping_fee_inr": "1169259.00"
+      },
+      "DELIVERED": {
+        "rows": 511560,
+        "gross_amount_inr": "1592074897.00",
+        "discount_amount_inr": "132951039.65",
+        "booked_amount_inr": "1459123857.35",
+        "refund_amount_inr": "0.00",
+        "shipping_fee_inr": "13321137.00"
+      },
+      "READY_TO_SHIP": {
+        "rows": 25905,
+        "gross_amount_inr": "81023149.00",
+        "discount_amount_inr": "6811693.15",
+        "booked_amount_inr": "74211455.85",
+        "refund_amount_inr": "0.00",
+        "shipping_fee_inr": "677047.00"
+      },
+      "RETURNED": {
+        "rows": 57829,
+        "gross_amount_inr": "179797829.00",
+        "discount_amount_inr": "14988543.40",
+        "booked_amount_inr": "164809285.60",
+        "refund_amount_inr": "164809285.60",
+        "shipping_fee_inr": "1508165.00"
+      }
+    },
+    "rows_by_month": {
+      "2026-01": 72570,
+      "2026-02": 65292,
+      "2026-03": 72930,
+      "2026-04": 70209,
+      "2026-05": 72609,
+      "2026-06": 70535,
+      "2026-07": 72762,
+      "2026-08": 72912,
+      "2026-09": 70574
+    },
+    "reconciliation": {
+      "sum_status_rows_equals_total": true,
+      "booked_equals_gross_minus_discount": true,
+      "refund_equals_returned_booked": true
+    }
+  }
+}
